@@ -12,9 +12,9 @@
     <header class="header">
         <nav class="menu">
             <ul class="menu_list">
-                <li class="menu_item"><a href="#">О аукционе</a></li>
-                <li class="menu_item"><a href="#">Лоты</a></li>
-                <li class="menu_item"><a href="#">Контакты</a></li>
+                <li class="menu_item-first"><a href="#">главная</a></li>
+                <li class="menu_item"><a href="#">посмотреть лоты</a></li>
+                <li class="menu_item"><a href="#">об аукционе</a></li>
             </ul>
         </nav>
         
@@ -25,21 +25,24 @@
         <address class="address">
             <a href="#">+9 999 555 5555</a><br>
             <a href="#">info@sobaka.ge</a><br>
-            <a href="#">наб. Принсенграхт 263- 265, Амстердам</a>
+            <a href="#">наб. Принсенграхт 263-<br>265, Амстердам</a>
         </address>
     </header>
 
 <main class="main">
     <section class="cover">
-        <h1>
-            <p>оно</p>
-            <p>тебе</p>
-            <p>надо</p>
-        </h1>
-        <div class="description">
-            <p class="description-text">Аукцион вещей, в которые никто не верил</p>
-            <button class="button">сделать ставку</button>
+        <div class="cover-overlay">
+            <h1 class="cover-text">
+                <span class="fist-word">оно</span>
+                <span class="second-word">тебе</span>
+                <span class="third-word">надо</span>
+            </h1>
+            <div class="description">
+                <p class="description-text">Аукцион вещей, в которые никто не верил</p>
+                <button class="cover-button">сделать ставку</button>
+            </div>
         </div>
+        
     </section>
 
     <section class="lots">
@@ -85,6 +88,12 @@
         </div>
     </section>
 </main>
-<footer></footer>
+<footer class="footer">
+    <address class="footer-address">
+            <a href="#" class="footer-address_link">+9 999 555 5555</a><br>
+            <a href="#" class="footer-address_link">info@sobaka.ge</a><br>
+            <a href="#" class="footer-address_link">наб. Принсенграхт 263-265,<br>Амстердам</a>
+        </address>
+</footer>
 </body>
 </html>
