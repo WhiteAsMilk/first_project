@@ -10,21 +10,21 @@
 
 <body>
     <header class="header">
-        <nav class="menu">
+        <nav class="header_menu">
             <ul class="menu_list">
-                <li class="menu_item-first"><a href="#">главная</a></li>
-                <li class="menu_item"><a href="#">посмотреть лоты</a></li>
-                <li class="menu_item"><a href="#">об аукционе</a></li>
+                <li class="header_link_active"><a href="#">главная</a></li>
+                <li class="header_link"><a href="#">посмотреть лоты</a></li>
+                <li class="header_link"><a href="#">об аукционе</a></li>
             </ul>
         </nav>
         
         <a class="logo">
-            <img src="img/logo.svg" alt="логотип" class="logo__image">
+            <img src="img/logo.svg" alt="логотип" class="header_logo">
         </a>
         
-        <address class="address">
-            <a href="#">+9 999 555 5555</a><br>
-            <a href="#">info@sobaka.ge</a><br>
+        <address class="address header_address">
+            <a href="tel:+99995555555">+9 999 555 5555</a>
+            <a href="mailto:info@sobaka.ge" class="email">info@sobaka.ge</a>
             <a href="#">наб. Принсенграхт 263-<br>265, Амстердам</a>
         </address>
     </header>
@@ -33,47 +33,46 @@
     <section class="cover">
         <div class="cover-overlay">
             <h1 class="cover-text">
-                <span class="fist-word">оно</span>
-                <span class="second-word">тебе</span>
-                <span class="third-word">надо</span>
+                <p class="fist-word">оно</p>
+                <p class="second-word">тебе</p>
+                <p class="third-word">надо</p>
             </h1>
             <div class="description">
                 <p class="description-text">Аукцион вещей, в которые никто не верил</p>
                 <button class="cover-button">сделать ставку</button>
-            </div>
-        </div>
-        
+            </div>           
+        </div>        
     </section>
 
     <section class="lots">
-        <ul>
-            <li>
+        <p class="lots-header">лоты</p>
+        <ul class="lots-list">
+            <li class="lot-item film">
                 <a href="#">
                     <article>
-                        <h3>Фильм режиссёра, который бросил киношколу</h3>
+                        <h3 class="lot-header">Фильм режиссёра, который бросил киношколу</h3>
                         <p>Не просто бросил, а ушёл с первой лекции. Какой была бы ваша ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон?</p
                     </article>
                  </a>
             </li>
-            <li>
+            <li class="lot-item book">
                 <a href="#">
                     <article>
-                        <h3>Книга, где описан один скучный день из жизни рекламного агента</h3>
+                        <h3 class="lot-header">Книга, где описан один скучный день из жизни рекламного агента</h3>
                         <p>Объёмом почти в тысячу страниц. Иногда без знаков препинания и с переходами на древнеанглийский. В ней одновременно рассказывается о 16 июня 1904 года и об истории литературы, начиная с античных времён. И это всё накладывается на эпическую поэму Гомера. Сколько бы вы поставили на «Улисса» Джеймса Джойса?</p>
-                        <p></p>
                     </article>
                 </a>
             </li>
-            <li>
+            <li class="lot-item picture">
                 <a href="#">
                     <article>
-                        <h3>Картина, которую повторит даже 5-летний сын маминой подруги</h3>
+                        <h3 class="lot-header">Картина, которую повторит даже 5-летний сын маминой подруги</h3>
                         <p>Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то похожее на инфузорию-туфельку. Никаких полей, лесов, котиков... Сколько бы вы на такое поставили, если бы не знали, что это — одна из революционных работ Кандинского?</p>
                     </article>
                 </a>
             </li>
         </ul>
-        <a href="#"></a>
+        <a href="#">посмотреть больше</a>
     </section>
 
     <section class="about">

@@ -13,56 +13,55 @@ body {
 .header {
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
-    width: 1100px;
     height: 293px;
     align-items: center;
-    /* align-content: center; */
 }
 
-.menu {
+.header_menu {
     grid-column: 1;
     justify-self: start;
-    
-    /* padding-left: 50px;     */
 }
 
 .logo {
     grid-column: 2;
     justify-self: center;
-    margin: 0 auto;
 }
 
-.address {
+.header_address {
+    font: 400 18px/1.35 "Raleway", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
     grid-column: 3;
     justify-self: right;
-    padding-right: 100px; /* почему-то только так выравнивается */
+    padding-right: 90px; /* почему-то только так выравнивается */
+    font-style: normal;
+    color: black;
 }
 
 .menu_list {
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 35px;
-    padding-left: 50px;
+    gap: 25px;
 }
 
-.menu_item a, .menu_item-first a  {
+.header_link a, .header_link_active a {
     color: black;
-    font-size: 18px;
+    font-size: 19px;
 }
 
-.menu_item {
+.header_link {
     list-style-type: circle;   
     justify-content: space-between;
     text-decoration: underline;
 }
 
-.menu_item-first a {    
+.header_link_active a {    
     text-decoration: none;
+    padding-left: 50px;
 }
 
-.logo__image {
+.header_logo {
     display: block;
     width: 148px;
     height: 105;
@@ -78,23 +77,22 @@ body {
     letter-spacing: 30%;
     text-transform: uppercase;
     display: flex;
+    align-items: flex-start;
 }
 
 .address a {
     text-decoration: none;
+    color: black;
 }
 
 .cover {    
-    background-image: url(img/lotus-flower.png);
-    background-size: cover;
-    background-position: center;
+    background: url(img/lotus-flower.png) center/cover;
     height: 757px;
     position: relative;
 }
 .cover-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
@@ -104,34 +102,95 @@ body {
     padding: 165px 50px 50px;
 }
 .cover-text {
-    font-family: "Raleway", sans-serif;
+    font: 700 100px/1.2 "Raleway", sans-serif;
     color: white;
-    font-weight: 700;
-    font-size: 100px;
-    line-height: 1.14;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    flex-direction: column; /* Добавьте это */
-    align-items: flex-start; /* И это */
-    gap: 20px; /* Отступ между словами */
+    flex-direction: column;
+    display: flex;
+    gap: 15px;    
 }
 
-.first-word {
-    align-self: flex-start;
-}
+.first-word { align-self: flex-start; }
 
 .second-word {
     align-self: center;
-    margin-left: 50px;
+    margin: 0 auto;
+    width: 339px;
+    height: 115px;   
 }
 
 .third-word {
     align-self: flex-end;
-    margin-right: -30px;
+    margin-right: 0;
+    width: 387px;
+    height: 115px;
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.description-text {  
+    font: 400 22px "Raleway", sans-serif;   
+    line-height: 28px;
+    text-transform: uppercase;
+    color: white;
+    word-spacing: 17px;
+}
+.cover-button {
+    width: 256px;
+    height: 51px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.lots {
+    margin-top: 180px;
+    margin-left: 24px;
+}
+
+.lots-header {
+    text-transform: uppercase;
+    font: 700 40px "Raleway", sans-serif; 
+    padding-left: 40px;
+}
+
+.lots-list {
+    padding-top: 74px;
+
 }
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 180px 50px 90px;
     align-items: start;
+}
+
+.lots-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 35px;
+
+}
+
+.film {
+    grid-column: 1;
+    background-image: url(img/photo.png);
+    border: 1px solid black;
+}
+
+.book {
+    grid-column: 2;
+}
+
+.picture {
+    grid-column: 3;
 }
