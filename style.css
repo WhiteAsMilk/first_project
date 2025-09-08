@@ -80,13 +80,12 @@ body {
     align-items: flex-start;
 }
 
-.address a {
-    text-decoration: none;
+.header_address a {
     color: black;
 }
 
-a.phone a.email {
-    text-decoration: underline;
+.header_address-item {
+    text-decoration: none;
 }
 
 .cover {    
@@ -139,6 +138,7 @@ a.phone a.email {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
 }
 
 .description-text {  
@@ -163,18 +163,16 @@ a.phone a.email {
 .lots {
     margin-top: 180px;
     margin-left: 24px;
+    margin-right: 24px;
+    height: 723px;
 }
 
 .lots-header {
     text-transform: uppercase;
     font: 700 40px "Raleway", sans-serif; 
-    padding-left: 40px;
+    padding-left: 40px;  
 }
 
-.lots-list {
-    padding-top: 74px;
-
-}
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -183,22 +181,74 @@ a.phone a.email {
 }
 
 .lots-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 35px;
+    list-style: none;
+    margin-top: 27px;
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 25px;
+    justify-content: center;
+    flex-direction: row;
+}
 
+.lot-item {
+    width: 100%;
+    min-height: 596px;
+    min-width: 334px;    
+}
+
+.lot-item a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    z-index: 2;
+}
+
+.lot-item {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.lot-header {
+    font: 700 22px "Raleway", sans-serif;    
+    font-style: Bold;
+    font-size: 22px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    padding-top: 48px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .film {
-    grid-column: 1;
-    background-image: url(img/photo.png);
-    border: 1px solid black;
+    background: url(img/photo.png) center/cover;
 }
 
 .book {
-    grid-column: 2;
+    background: url(img/book.jpg) center/cover;
 }
 
 .picture {
-    grid-column: 3;
+    background: url(img/abstract.png) center/cover;
+}
+
+.lot-item-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.about {
+    margin-top: 120px;
+    margin-left: 24px;
+    background-color: blueviolet;
 }
